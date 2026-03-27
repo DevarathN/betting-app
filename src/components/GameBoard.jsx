@@ -21,6 +21,7 @@ export default function GameBoard() {
   const [bet, setBet] = useState(10);
 
   // ✅ check matched
+  const canPlay = balance > 0 && balance >= bet;
   const isMatched = (row, index, currentMatched = matched) => {
     return currentMatched.some((m) =>
       row === 1 ? m.r1 === index : m.r2 === index,
@@ -66,6 +67,10 @@ export default function GameBoard() {
 
   // ✅ selection logic with row restriction
   const handleSelection = (row, index) => {
+     if (!canPlay) {
+    alert("Insufficient balance!");
+    return;
+  }
     let newSelected = { ...selected };
 
     // 🚫 Prevent clicking matched cards
