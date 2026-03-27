@@ -258,6 +258,9 @@ button:hover {
   display: block;
   text-align: center;
 }
+.page{
+padding:20px
+} 
 /* Table container */
 .table-container {
   margin-top: 20px;
