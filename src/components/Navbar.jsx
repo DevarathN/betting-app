@@ -6,12 +6,13 @@ export default function Navbar() {
 
   return (
     <>
-      {user?.role === "admin" && <a href="/admin">Admin</a>}
       {user ? (
         <div className="navbar logged-in">
           <div>
             <a href="/game">Game</a>
             <a href="/wallet">Wallet</a>
+                  {user?.role === "admin" && <a href="/admin">Admin</a>}
+
           </div>
           <div>
             <button
