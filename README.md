@@ -1,18 +1,107 @@
-# React + Vite
+# 🎮 Betting Card Matching Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack betting-based card matching web application where users can place bets, play a number-matching game, and win rewards based on outcomes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+### 🎯 Game Logic
+- 10 cards (2 rows × 5 cards)
+- Unique numbers in each row
+- Same numbers across rows (shuffled positions)
+- Card matching system:
+  - ✅ Match → cards stay open
+  - ❌ No match → cards close
+- Anti-cheat mechanism:
+  - Dynamic shuffle after each turn
+  - No shuffle during selection
+  - Matched cards remain fixed
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+### 💰 Betting System
+- Users can place bets before each round
+- Example:
+  - ₹10 → ₹30 return
+- Constraints:
+  - Cannot play if balance is insufficient
+  - Balance updates dynamically
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👤 Authentication
+- User Registration & Login
+- Role-based access:
+  - `admin`
+  - `user`
+- Protected routes:
+  - Game & Wallet require login
+  - Admin panel restricted
+
+---
+
+### 💳 Wallet System
+- Add money
+- Withdraw money
+- Balance validation
+- Prevents negative balance
+
+---
+
+### 🛠 Admin Panel
+- View all registered users
+- Track:
+  - Email
+  - Balance
+  - Role
+- Table-based UI
+
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+- React.js
+- React Router
+- CSS (Custom styling)
+
+### Backend (Planned / Required)
+- Node.js
+- Express.js
+- MongoDB
+
+---
+
+## 📁 Folder Structure
+betting-app/src/
+│
+├── components/
+│ ├── Card.jsx
+│ ├── GameBoard.jsx
+│ ├── Wallet.jsx
+│ └── Navbar.jsx
+│
+├── pages/
+│ ├── Login.jsx
+│ ├── Register.jsx
+│ ├── Game.jsx
+│ ├── WalletPage.jsx
+│ └── Admin.jsx
+│
+├── services/
+│ └── api.js
+│
+├── hooks/
+│ └── useGame.js
+│
+├── context/
+│ ├── AuthContext.jsx
+│ └── AuthProvider.jsx
+│
+├── App.jsx
+└── main.jsx
+
+Inorder to access admin Panel in the project use the following credentials:
+email: admin@gmail.com
+password: testpass001
