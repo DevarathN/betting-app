@@ -103,5 +103,7 @@ betting-app/src/
 └── main.jsx
 
 Inorder to access admin Panel in the project use the following credentials:
+
 email: admin@gmail.com
+
 password: testpass001
