@@ -313,3 +313,40 @@ tr:hover {
 .badge.user {
   background: #22c55e;
 }
+.wallet-container {
+  text-align: center;
+}
+
+.wallet-balance {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.wallet-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+.wallet-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Withdraw button */
+.danger-btn {
+  background: #ef4444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.danger-btn:hover {
+  background: #dc2626;
+}
