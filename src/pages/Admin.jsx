@@ -6,8 +6,9 @@ export default function Admin() {
     return <h2>Access Denied</h2>;
   }
   return (
-    <div>
+    <div style={{padding:"20px"}}>
       <h2>Admin Panel</h2>
+      <h3>Regsitered Users</h3>
       {users.map((u, i) => (
         <div key={i}>{u.email}</div>
       ))}
